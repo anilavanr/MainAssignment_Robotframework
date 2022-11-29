@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.8 on win32)" generated="20221129 13:53:57.781" rpa="false" schemaversion="3">
+<suite id="s1" name="Changeusername" source="C:\Users\anilavanr\PycharmProjects\MainAssignment\Automation\changeusername.robot">
+<test id="s1-t1" name="Testcase1" line="19">
+<kw name="Initialize" library="GenericKeyword">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221129 13:53:58.313" level="INFO">Opening browser 'chrome' to base url 'https://open.rocket.chat/'.</msg>
+<status status="PASS" starttime="20221129 13:53:58.312" endtime="20221129 13:54:02.993"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221129 13:54:02.994" endtime="20221129 13:54:03.127"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Rocket.Chat</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221129 13:54:03.132" level="INFO">Page title is 'Rocket.Chat'.</msg>
+<status status="PASS" starttime="20221129 13:54:03.127" endtime="20221129 13:54:03.132"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Rocket.Chat</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221129 13:54:03.132" endtime="20221129 13:54:03.148"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 13:54:23.156" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20221129 13:54:03.148" endtime="20221129 13:54:23.156"/>
+</kw>
+<status status="PASS" starttime="20221129 13:53:58.312" endtime="20221129 13:54:23.156"/>
+</kw>
+<tag>Launch</tag>
+<status status="PASS" starttime="20221129 13:53:58.310" endtime="20221129 13:54:23.157"/>
+</test>
+<test id="s1-t2" name="Testcase2" line="23">
+<kw name="Login to the page" library="GenericKeyword">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>4</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221129 13:54:23.160" endtime="20221129 13:54:23.162"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${input_text}</var>
+<arg>xpath://*[@id="username"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221129 13:54:23.162" level="INFO">${input_text} = xpath://*[@id="username"]</msg>
+<status status="PASS" starttime="20221129 13:54:23.162" endtime="20221129 13:54:23.162"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${input_text}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221129 13:54:23.162" endtime="20221129 13:54:23.203"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${input_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221129 13:54:23.228" level="INFO">Element 'xpath://*[@id="username"]' is displayed.</msg>
+<status status="PASS" starttime="20221129 13:54:23.204" endtime="20221129 13:54:23.228"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="username"]</arg>
+<arg>Johnneymar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:23.229" level="INFO">Typing text 'Johnneymar' into text field 'xpath://*[@id="username"]'.</msg>
+<status status="PASS" starttime="20221129 13:54:23.228" endtime="20221129 13:54:23.389"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${input_text}</var>
+<arg>xpath://*[@id="username"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221129 13:54:23.390" level="INFO">${input_text} = xpath://*[@id="username"]</msg>
+<status status="PASS" starttime="20221129 13:54:23.390" endtime="20221129 13:54:23.390"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${input_text}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221129 13:54:23.390" endtime="20221129 13:54:23.427"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${input_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221129 13:54:23.455" level="INFO">Element 'xpath://*[@id="username"]' is displayed.</msg>
+<status status="PASS" starttime="20221129 13:54:23.428" endtime="20221129 13:54:23.455"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="password"]</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:23.457" level="INFO">Typing text 'test' into text field 'xpath://*[@id="password"]'.</msg>
+<status status="PASS" starttime="20221129 13:54:23.456" endtime="20221129 13:54:23.565"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="react-root"]/div/div/div[2]/form/footer/div/button</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20221129 13:54:23.654" level="INFO">Current page contains button 'xpath://*[@id="react-root"]/div/div/div[2]/form/footer/div/button'.</msg>
+<status status="PASS" starttime="20221129 13:54:23.565" endtime="20221129 13:54:23.654"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="react-root"]/div/div/div[2]/form/footer/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:23.655" level="INFO">Clicking button 'xpath://*[@id="react-root"]/div/div/div[2]/form/footer/div/button'.</msg>
+<status status="PASS" starttime="20221129 13:54:23.654" endtime="20221129 13:54:23.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 13:54:28.750" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221129 13:54:23.735" endtime="20221129 13:54:28.750"/>
+</kw>
+<status status="PASS" starttime="20221129 13:54:23.159" endtime="20221129 13:54:28.750"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" starttime="20221129 13:54:23.159" endtime="20221129 13:54:28.751"/>
+</test>
+<test id="s1-t3" name="Testcase3" line="27">
+<kw name="Go to Profile Section" library="Username">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>(•) Rocket.Chat</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221129 13:54:28.758" level="INFO">Page title is '(•) Rocket.Chat'.</msg>
+<status status="PASS" starttime="20221129 13:54:28.753" endtime="20221129 13:54:28.758"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>(•) Rocket.Chat</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221129 13:54:28.759" endtime="20221129 13:54:28.778"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>4</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221129 13:54:28.778" endtime="20221129 13:54:28.780"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20221129 13:54:28.799" level="INFO">Current page contains image 'xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img'.</msg>
+<status status="PASS" starttime="20221129 13:54:28.780" endtime="20221129 13:54:28.799"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:28.800" level="INFO">Clicking image 'xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img'.</msg>
+<status status="PASS" starttime="20221129 13:54:28.800" endtime="20221129 13:54:28.975"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element_text}</var>
+<arg>xpath:/html/body/div[4]/div/div/li[7]/div/div[2]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221129 13:54:28.976" level="INFO">${element_text} = xpath:/html/body/div[4]/div/div/li[7]/div/div[2]</msg>
+<status status="PASS" starttime="20221129 13:54:28.976" endtime="20221129 13:54:28.976"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${element_text}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221129 13:54:28.976" endtime="20221129 13:54:29.023"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221129 13:54:29.048" level="INFO">Element 'xpath:/html/body/div[4]/div/div/li[7]/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20221129 13:54:29.023" endtime="20221129 13:54:29.048"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[4]/div/div/li[7]/div/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:29.049" level="INFO">Clicking element 'xpath:/html/body/div[4]/div/div/li[7]/div/div[2]'.</msg>
+<status status="PASS" starttime="20221129 13:54:29.048" endtime="20221129 13:54:29.127"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 13:54:36.133" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20221129 13:54:29.127" endtime="20221129 13:54:36.133"/>
+</kw>
+<status status="PASS" starttime="20221129 13:54:28.753" endtime="20221129 13:54:36.133"/>
+</kw>
+<tag>Profile</tag>
+<status status="PASS" starttime="20221129 13:54:28.752" endtime="20221129 13:54:36.134"/>
+</test>
+<test id="s1-t4" name="Testcase4" line="31">
+<kw name="Update the username in profile" library="Username">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="rocket-chat"]/div[3]/section/div[2]/div/div[1]/div/div/form/div[2]/div[2]/span[1]/label/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20221129 13:54:36.136" endtime="20221129 13:54:36.199"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="rocket-chat"]/div[3]/section/div[2]/div/div[1]/div/div/form/div[2]/div[2]/span[1]/label/input</arg>
+<arg>Peterneymar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:36.201" level="INFO">Typing text 'Peterneymar' into text field 'xpath://*[@id="rocket-chat"]/div[3]/section/div[2]/div/div[1]/div/div/form/div[2]/div[2]/span[1]/label/input'.</msg>
+<status status="PASS" starttime="20221129 13:54:36.199" endtime="20221129 13:54:36.453"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 13:54:39.465" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221129 13:54:36.454" endtime="20221129 13:54:39.465"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element_text}</var>
+<arg>xpath://*[@id="rocket-chat"]/aside/div[5]/div/div/header/div/button/i</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221129 13:54:39.466" level="INFO">${element_text} = xpath://*[@id="rocket-chat"]/aside/div[5]/div/div/header/div/button/i</msg>
+<status status="PASS" starttime="20221129 13:54:39.466" endtime="20221129 13:54:39.467"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${element_text}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221129 13:54:39.467" endtime="20221129 13:54:39.578"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221129 13:54:39.600" level="INFO">Element 'xpath://*[@id="rocket-chat"]/aside/div[5]/div/div/header/div/button/i' is displayed.</msg>
+<status status="PASS" starttime="20221129 13:54:39.579" endtime="20221129 13:54:39.601"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="rocket-chat"]/aside/div[5]/div/div/header/div/button/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:39.602" level="INFO">Clicking element 'xpath://*[@id="rocket-chat"]/aside/div[5]/div/div/header/div/button/i'.</msg>
+<status status="PASS" starttime="20221129 13:54:39.601" endtime="20221129 13:54:39.748"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 13:54:41.750" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221129 13:54:39.749" endtime="20221129 13:54:41.750"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20221129 13:54:41.764" level="INFO">Current page contains image 'xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img'.</msg>
+<status status="PASS" starttime="20221129 13:54:41.751" endtime="20221129 13:54:41.764"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:41.765" level="INFO">Clicking image 'xpath://*[@id="rocket-chat"]/aside/div[1]/div/div/div[1]/figure/img'.</msg>
+<status status="PASS" starttime="20221129 13:54:41.764" endtime="20221129 13:54:41.851"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>clicked image button successfully</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221129 13:54:41.851" endtime="20221129 13:54:41.852"/>
+</kw>
+<status status="PASS" starttime="20221129 13:54:36.136" endtime="20221129 13:54:41.852"/>
+</kw>
+<tag>update_username</tag>
+<status status="PASS" starttime="20221129 13:54:36.135" endtime="20221129 13:54:41.853"/>
+</test>
+<test id="s1-t5" name="Testcase5" line="35">
+<kw name="Logout of the page" library="Username">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[4]/div/div/li[8]/div/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221129 13:54:41.855" level="INFO">Clicking element 'xpath:/html/body/div[4]/div/div/li[8]/div/div[2]'.</msg>
+<status status="PASS" starttime="20221129 13:54:41.855" endtime="20221129 13:54:41.931"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>clicked logout successfully</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221129 13:54:41.931" endtime="20221129 13:54:41.932"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 13:54:45.942" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20221129 13:54:41.932" endtime="20221129 13:54:45.942"/>
+</kw>
+<status status="PASS" starttime="20221129 13:54:41.854" endtime="20221129 13:54:45.943"/>
+</kw>
+<tag>Logout</tag>
+<status status="PASS" starttime="20221129 13:54:41.854" endtime="20221129 13:54:45.948"/>
+</test>
+<doc>This file having the Testcase of Login and logoout</doc>
+<status status="PASS" starttime="20221129 13:53:57.784" endtime="20221129 13:54:45.950"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Launch</stat>
+<stat pass="1" fail="0" skip="0">Login</stat>
+<stat pass="1" fail="0" skip="0">Logout</stat>
+<stat pass="1" fail="0" skip="0">Profile</stat>
+<stat pass="1" fail="0" skip="0">update_username</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Changeusername">Changeusername</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
